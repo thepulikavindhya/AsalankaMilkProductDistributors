@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Report</title>
+    <link rel="stylesheet" href="style1.css">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <img src="photo/logo.jpg" alt="logo" class="logo">
+       <a href="#" class="active"><img src="photo/money.jpg" alt="money" class="md"> Dashboard</a>
+      <a href="stock_in.html"><img src="photo/money.jpg" alt="money" class="md"> Stock In</a>
+      <a href="sales.html" ><img src="photo/money.jpg" alt="money" class="md"> Sales</a>
+       <a href="orders.html"><img src="photo/money.jpg" alt="money" class="md"> Orders</a>
+        <a href="deliverymen.html"><img src="photo/dm.jpg" alt="money" class="md"> Deliverymen</a>
+       <a href="vendors.html"><img src="photo/v.jpg" alt="money" class="md"> Vendors</a>
+      <a href="returns.html"  ><img src="photo/r.jpg" alt="money" class="md"> Returns</a>
+      <a href="admin_report.html" class="active" ><img src="photo/report.jpg" alt="money" class="md"> Reports</a>
+      <a href="bill.html"><img src="photo/OIP.jpg" alt="money" class="md"> Logout</a>
+
+  </div>
+        <div class="content">
+            <h1 style="text-align: center;">Admin Reports</h1><br><br>
+              <div class="chart-container">
+                 <div class="chart-box">
+                     <h2 style="text-align: center;">Product Stock</h2>
+                  <canvas id="productChart" style="display: block;"></canvas>
+                </div>
+                  <div class="chart-box">
+                     <h2 style="text-align: center;">Invoice Amounts</h2>
+                      <canvas id="invoiceChart" style="display: block;"></canvas>
+                </div>
+                 <div class="chart-box">
+                    <h2 style="text-align: center;"> Return Amounts</h2>
+                    <canvas id="returnChart" style="display: block;"></canvas>
+               </div>
+                 <div class="chart-box">
+                    <h2 style="text-align: center;"></h2>
+                    <canvas id="paymentChart" style="display: block;"></canvas>
+               </div>
+            </div>
+             <div id="message-container" class="message-container"></div>
+        </div>
+   </div>
+     <script src="admin_report_script.js"></script>
+</body>
+</html>

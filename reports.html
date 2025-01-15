@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="photo/logo.jpg" alt="logo" class="logo">
+        <div class="menu">
+            <a href="bill.html">BILL</a>
+            <a href="stock.html">STOCK IN</a>
+            <a href="index.html">RETURN</a>
+            <a href="#" class="active">REPORT</a>
+            <a href="login.html">ADMIN</a>
+           <a href="payment.html">PAYMENT</a>
+        </div>
+    </div>
+    <h1>Reports Details</h1>
+    <div class="company-details">
+        <h4>ASALANKA MILK PRODUCT DISTRIBUTORS</h4>
+        <p>200/G/1, Bandaragama Road, Isurupura Kesbewa</p>
+        <p>071 123 4564</p>
+    </div><br><br>
+    <div class="report-buttons">
+        <button class="report-button" data-report="inventory">
+            <img src="photo/report.jpg" alt="Inventory Icon">
+            Inventory Report
+        </button>
+        <button class="report-button" data-report="cash">
+            <img src="photo/report.jpg" alt="Inventory Icon">
+            Cash Report
+        </button>
+        <button class="report-button" data-report="credit">
+            <img src="photo/report.jpg" alt="Inventory Icon">
+            Credit Report
+        </button>
+        <button class="report-button" data-report="cheque">
+            <img src="photo/report.jpg" alt="Inventory Icon">
+            Cheque Report
+        </button>
+         <button class="report-button" data-report="return">
+            <img src="photo/report.jpg" alt="Inventory Icon">
+            Return Report
+        </button>
+        <button class="report-button" data-report="balance">
+            <img src="photo/report.jpg" alt="Inventory Icon">
+            Balance Report
+        </button>
+    </div>
+    <div id="report-container" style="display: none;">
+       <h2 id="report-title"></h2>
+         <div id="report-content"></div>
+        <div id="return-tables" style="display: none;">
+          <h2>Customer Returns</h2>
+          <div id="customer-return-content"></div>
+           <h2>Company Returns</h2>
+         <div id="company-return-content"></div>
+        </div>
+        <canvas id="balanceChart" style="display: none;"></canvas>
+        <div id="message-container" class="message-container"></div>
+    </div>
+</div>
+<script src="report_script.js"></script>
+</body>
+</html>

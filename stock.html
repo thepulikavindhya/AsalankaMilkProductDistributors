@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="photo/logo.jpg" alt="logo" class="logo">
+            <div class="menu">
+                <a href="bill.html">BILL</a>
+                <a href="#" class="active">STOCK IN</a>
+                <a href="index.html">RETURN</a>
+                <a href="reports.html">REPORT</a>
+                <a href="login.html">ADMIN</a>
+                <a href="payment.html">PAYMENT</a>
+
+            </div>
+        </div>
+        <h1>Stock Details</h1>
+        <div class="company-details">
+            <h4>ASALANKA MILK PRODUCT DISTRIBUTORS</h4>
+            <p>200/G/1, Bandaragama Road, Isurupura Kesbewa</p>
+            <p>071 123 4564</p>
+        </div>
+        <br>
+        <br>
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Quick search by Product ID" class="search">
+        </div>
+        <br>
+        <div class="tables-container">
+            <div class="table-section">
+                <h2>Product Stock</h2>
+                <table id="stock-table">
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Stock</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody id="stock-items">
+                    <!-- Rows will be dynamically added here -->
+                    </tbody>
+                </table><br><br>
+                <button id="add-row-btn">Add</button>
+                <button id="remove-row-btn">Remove</button>
+                 <button id="submit-btn">Submit</button>
+            </div>
+            <br><br>
+            <div class="table-section">
+                <h2>Company Returns</h2><br>
+                <table id="company-returns-table">
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Invoice No</th>
+                        <th>Return Date</th>
+                        <th>Product</th>
+                        <th>Qty</th>
+                         <th>Amount</th>
+                    </tr>
+                    </thead>
+                     <tbody id="company-returns-items">
+                        <!-- Rows will be dynamically added here -->
+                      </tbody>
+                </table>
+            </div>
+            <br><br>
+            <div class="table-section">
+                <h2>Customer Returns</h2><br>
+                <table id="customer-returns-table">
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Invoice No</th>
+                         <th>Return Date</th>
+                        <th>Product</th>
+                         <th>Qty</th>
+                         <th>Amount</th>
+                    </tr>
+                    </thead>
+                     <tbody id="customer-returns-items">
+                        <!-- Rows will be dynamically added here -->
+                       </tbody>
+                </table>
+            </div>
+             <div id="message-container" class="message-container"></div>
+        </div>
+    </div>
+    <script src="stock_script.js"></script>
+</body>
+</html>

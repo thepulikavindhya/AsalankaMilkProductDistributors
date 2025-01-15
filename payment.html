@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+      <div class="header">
+            <img src="photo/logo.jpg" alt="logo" class="logo">
+            <div class="menu">
+               <a href="bill.html">BILL</a>
+               <a href="stock.html">STOCK IN</a>
+               <a href="index.html">RETURN</a>
+               <a href="reports.html">REPORT</a>
+               <a href="login.html">ADMIN</a>
+                <a href="#" class="active">PAYMENT</a>
+           </div>
+        </div>
+      <h1>Payment</h1>
+       <div class="company-details">
+        <h4>ASALANKA MILK PRODUCT DISTRIBUTORS</h4>
+        <p>200/G/1, Bandaragama Road, Isurupura Kesbewa</p>
+        <p>071 123 4564</p>
+        </div>
+         <div class="form-section">
+            <label>Invoice No: <input type="text" id="invoice_no"></label>
+            <label>Amount Due: <input type="text" id="amount_due" readonly></label>
+            <label>Amount Paid: <input type="number" id="amount_paid" value="0"></label>
+             <label>Remaining Amount: <input type="text" id="remaining_amount" readonly></label>
+             <label>Credit Balance: <input type="text" id="credit_balance" readonly></label>
+            <button id="save-payment-btn">Save Payment</button>
+        </div>
+      <br><br><br>
+        <div class="payment-list-section">
+             <div class="search-bar">
+                    <input type="text" id="search-payments" placeholder="Search by Invoice Number" class="search"> 
+                 </div>
+            <h2>Payment History</h2>
+            <table id="payment-list-table">
+               <thead>
+                    <tr>
+                         <th>Invoice No</th>
+                         <th>Amount Paid</th>
+                         <th>Credit Balance</th>
+                           <th>Action</th>
+                    </tr>
+               </thead>
+                 <tbody id="payment-list-items">
+                        <!-- Rows will be dynamically added here -->
+                   </tbody>
+           </table>
+         </div>
+         <br><br>
+         <div class="check-details-section">
+             <h2>Check Details</h2>
+            <button id="add-check-details-btn">Add Check Details</button>
+            <br><br><br>
+             <table id="check-details-table">
+                <thead>
+                    <tr>
+                         <th>No</th>
+                        <th>Invoice No</th>
+                        <th>Issue Date</th>
+                        <th>Expiry Date</th>
+                        <th>Check Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="check-details-items">
+                    <!-- Rows will be dynamically added here -->
+                </tbody>
+            </table>
+         </div>
+         <div id="message-container" class="message-container"></div>
+  </div>
+    <script src="payment_script.js"></script>
+</body>
+</html>

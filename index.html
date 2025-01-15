@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+         <div class="header">
+            <img src="photo/logo.jpg" alt="logo" class="logo">
+            <div class="menu">
+                <a href="bill.html">BILL</a>
+                <a href="stock.html">STOCK IN</a>
+                <a href="#"  class="active">RETURN</a>
+                <a href="reports.html">REPORT</a>
+                <a href="login.html">ADMIN</a>
+               <a href="payment.html">PAYMENT</a>
+            </div>
+        </div>
+        
+        <h1>Return Invoice</h1>
+        <div class="company-details">
+            <h4>ASALANKA MILK PRODUCT DISTRIBUTORS</h4>
+            <p>200/G/1, Bandaragama Road, Isurupura Kesbewa</p>
+            <p>071 123 4564</p>
+        </div><br><br><br>
+        
+        <div class="return-type">
+            <label><input type="radio" name="return_type" value="customer" checked> Customer Return</label>
+            <label><input type="radio" name="return_type" value="company"> Company Return</label>
+        </div>
+        
+        <div class="form-section">
+            <label>Invoice No: <input type="text" id="invoice_no"></label>
+            <label>Bill Date: <input type="date" id="bill_date"></label>
+            <label>Return Date: <input type="date" id="return_date"></label>
+            <label>Deliveryman ID: <input type="text" id="deliveryman_id"></label>
+            <label>Customer: <input type="text" id="customer"></label>
+            <label>Reason: <textarea id="reason"></textarea></label>
+        </div>
+        
+         <table id="return-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Original Price</th>
+                    <th>Discounted Price</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="return-items">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+             <tfoot>
+                    <tr>
+                        <td colspan="5" style="text-align: right;"><strong>Total Amount:</strong></td>
+                        <td id="total-amount">0.00</td>
+                    </tr>
+                </tfoot>
+        </table>
+        <button id="add-row-btn">Add Row</button>
+        <button id="submit-btn">Submit</button>
+        
+         <div id="message-container" class="message-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style1.css">
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <img src="photo/logo.jpg" alt="logo" class="logo">
+             <a href="#" class="active"><img src="photo/money.jpg" alt="money" class="md"> Dashboard</a>
+            <a href="stock_in.html"><img src="photo/money.jpg" alt="money" class="md"> Stock In</a>
+            <a href="sales.html" ><img src="photo/money.jpg" alt="money" class="md"> Sales</a>
+             <a href="orders.html"><img src="photo/money.jpg" alt="money" class="md"> Orders</a>
+              <a href="deliverymen.html"><img src="photo/dm.jpg" alt="money" class="md"> Deliverymen</a>
+             <a href="vendors.html"><img src="photo/v.jpg" alt="money" class="md"> Vendors</a>
+            <a href="returns.html"><img src="photo/r.jpg" alt="money" class="md"> Returns</a>
+            <a href="admin_report.html"><img src="photo/report.jpg" alt="money" class="md"> Reports</a>
+            <a href="bill.html"><img src="photo/OIP.jpg" alt="money" class="md"> Logout</a>
+
+        </div>
+        <div class="content">
+             <div class="dashboard-header">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search by Product ID">
+                 </div>
+                <button id="add-new-btn" >Add New</button>
+            </div>
+          <div class="summary-cards">
+                 <div class="card">
+                  <img src="photo/money.jpg" alt="money" class="money">
+                    <p>Income</p>
+                   <span id="income-amount">0</span>
+                </div>
+                <div class="card">
+                  <img src="photo/money.jpg" alt="money" class="money">
+                    <p>Cash</p>
+                   <span id="cash-amount">0</span>
+                </div>
+               <div class="card">
+                <img src="photo/money.jpg" alt="money" class="money">
+                    <p>Credit</p>
+                    <span id="credit-amount">0</span>
+                </div>
+                <div class="card">
+                  <img src="photo/money.jpg" alt="money" class="money">
+                   <p>Cheque</p>
+                   <span id="cheque-amount">0</span>
+               </div>
+            </div>
+            <br><br>
+
+          <canvas id="productChart" style="display: block;"></canvas>
+
+          <br><br> <br><br>
+
+           <div class="data-tables">
+            <div class="table-section">
+                 <h2>Top selling Products</h2>
+               <table id="top-selling-table">
+                     <thead>
+                         <tr>
+                             <th>Product ID</th>
+                              <th>Product Name</th>
+                             <th>Quantity</th>
+                              <th>Amount</th>
+                        </tr>
+                     </thead>
+                      <tbody id="top-selling-items">
+                        <!-- Rows will be dynamically added here -->
+                      </tbody>
+                </table>
+                 <button id="view-top-selling-btn"><a href="sales.html">View All</a></button>
+            </div>
+
+            <br><br> <br><br>
+              <div class="table-section">
+                <h2>Stock Alert</h2>
+               <table id="stock-alert-table">
+                      <thead>
+                         <tr>
+                             <th>Product ID</th>
+                             <th>Product Name</th>
+                             <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stock-alert-items">
+                       <!-- Rows will be dynamically added here -->
+                  </tbody>
+               </table>
+               <button id="view-stock-alert-btn"><a href="stock_in.html">View All</a></button>
+             </div>
+          </div>
+        </div>
+         <div id="message-container" class="message-container"></div>
+        <div id="modal-container" class="modal-container" style="display: none;">
+            <div class="modal-content">
+              <span class="close-btn">×</span>
+              <h2 id="modal-title"></h2>
+            <div id="modal-data-container"></div>
+          </div>
+    </div>
+    </div>
+    <script src="dashboard_script.js"></script>
+</body>
+</html>

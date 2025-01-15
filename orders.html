@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="sidebar">
+        <img src="photo/logo.jpg" alt="logo" class="logo">
+         <a href="#" class="active"><img src="photo/money.jpg" alt="money" class="md"> Dashboard</a>
+        <a href="stock_in.html"><img src="photo/money.jpg" alt="money" class="md"> Stock In</a>
+        <a href="sales.html" ><img src="photo/money.jpg" alt="money" class="md"> Sales</a>
+         <a href="orders.html" class="active"><img src="photo/money.jpg" alt="money" class="md"> Orders</a>
+          <a href="deliverymen.html"><img src="photo/dm.jpg" alt="money" class="md"> Deliverymen</a>
+         <a href="vendors.html"><img src="photo/v.jpg" alt="money" class="md"> Vendors</a>
+        <a href="returns.html"><img src="photo/r.jpg" alt="money" class="md"> Returns</a>
+        <a href="admin_report.html"><img src="photo/report.jpg" alt="money" class="md"> Reports</a>
+        <a href="bill.html"><img src="photo/OIP.jpg" alt="money" class="md"> Logout</a>
+
+    </div>
+        <div class="content">
+            <div class="dashboard-header">
+                <h1>Orders</h1>
+                     <div class="payment-type-buttons">
+                        <button class="payment-type-button active" data-payment-type="cash">Cash</button>
+                        <button class="payment-type-button" data-payment-type="credit">Credit</button>
+                         <button class="payment-type-button" data-payment-type="cheque">Cheque</button>
+                    </div>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Quick search by Product ID" class="search">
+                 </div>
+            </div>
+           <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Product ID</th>
+                         <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                 <tbody id="orders-items">
+                    <!-- Rows will be dynamically added here -->
+                </tbody>
+            </table>
+             <button id="next-btn">Next >></button>
+               <div id="message-container" class="message-container"></div>
+        </div>
+  </div>
+    <script src="orders_script.js"></script>
+</body>
+</html>
